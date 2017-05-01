@@ -18,6 +18,8 @@ Features
 * **Like / Favorite** : Liked photos are favorited in the user's Flickr account
 * **OAuth** : To sync up with the favorites in concerned Flickr account
 
+App Architecture
+----------------
         .
         ├── README.md ------------------> Description of this application
         ├── flickr_feed
@@ -34,6 +36,5 @@ Features
         │   ├── templates
         │   │   └── index.html ---------> The only page of this app
         │   └──  views.py --------------> View functions for all the routes
-        ├── requirements.txt -----------> App requirements
-        └── setup.py
+        └──  requirements.txt -----------> App requirements
 
