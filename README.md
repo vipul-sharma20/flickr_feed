@@ -18,22 +18,22 @@ Features
 * **Like / Favorite** : Liked photos are favorited in the user's Flickr account
 * **OAuth** : To sync up with the favorites in concerned Flickr account
 
-    .
-    ├── README.md ------------------> Description of this application
-    ├── flickr_feed
-    │   ├── __init__.py ------------> FLASK_APP starts here
-    │   ├── config.py --------------> API configuration and app configs
-    │   ├── flickr.py --------------> Flickr OAuth and API requests ** (I found this interesting) **
-    │   ├── static
-    │   │   ├── css
-    │   │   │   ├── main.css  ------> Templates CSS
-    │   │   │   └── main.min.css ---> Minified version of above
-    │   │   └── js
-    │   │       ├── main.js --------> All of JavaScript code
-    │   │       └── main.min.js ----> Minified version of above
-    │   ├── templates
-    │   │   └── index.html ---------> The only page of this app
-    │   └──  views.py --------------> View functions for all the routes
-    ├── requirements.txt -----------> App requirements
-    └── setup.py
+        .
+        ├── README.md ------------------> Description of this application
+        ├── flickr_feed
+        │   ├── __init__.py ------------> FLASK_APP starts here
+        │   ├── config.py --------------> API configuration and app configs
+        │   ├── flickr.py --------------> Flickr OAuth and API requests ** (I found this interesting) **
+        │   ├── static
+        │   │   ├── css
+        │   │   │   ├── main.css  ------> Templates CSS
+        │   │   │   └── main.min.css ---> Minified version of above
+        │   │   └── js
+        │   │       ├── main.js --------> All of JavaScript code
+        │   │       └── main.min.js ----> Minified version of above
+        │   ├── templates
+        │   │   └── index.html ---------> The only page of this app
+        │   └──  views.py --------------> View functions for all the routes
+        ├── requirements.txt -----------> App requirements
+        └── setup.py
 
