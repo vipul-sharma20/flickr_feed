@@ -6,7 +6,7 @@ How to run ?
 * `git clone https://github.com/vipul-sharma20/flickr_feed.git`
 * `cd flickr_feed`
 * `virtualenv ff`
-* `workon ff` or source ff/bin/activate`
+* `workon ff` or source `ff/bin/activate`
 * `pip install -r requirements.txt`
 * `export FLASK_APP=flickr_feed/__init__.py`
 * `flask run`
