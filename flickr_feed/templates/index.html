@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='css/main.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="{{ url_for('static', filename='js/main.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    {% if not session['authenticated'] %}
+    <nav>
+      <ul class="nav">
+          <li class="active"><a href="{{ url_for('login') }}">Login</a></li>
+      </ul>
+    </nav>
+    {% endif %}
+
+    <div class="container">
+        <main class="content">
+            <h1>Flickr Public Feed</h1>
+            <form method="get" id="id_search">
+                <div class="boxbox">
+                    <input class="search" type="text" placeholder="Search"/>
+                    <input class="submit" type="submit" value="GO"/>
+                </div>
+            </form>
+            <hr>
+            <ul class="gallery">
+            {% for image in data.images %}
+            <li>
+                <div class="imgwrap">
+                    <a href="{{ image.link }}" target="_blank">
+                        <img src="{{ image.media.m }}" alt="image">
+                    </a>
+                    <div class="item-overlay top">
+                        {% set tokens = image.link.split('/') %}
+                        <div id="id_left">
+                            <i class="heart fa fa-heart-o">
+							<a class="like" href='/like/{{ tokens[-2] }}'></a>
+						    </i>
+                        </div>
+		                <div id="id_right">
+                            <span id="id_img_title">{{ image.title }}</span>
+                        </div>
+                    </div> <!-- title / like button Overlay div -->
+                </div> <!-- image wrap div -->
+            </li>
+            {% endfor %}
+            </ul>
+        </main>
+        <hr>
+        <footer>
+            Built with <span style="color:red">&hearts;</span> by
+            <a href="https://github.com/vipul-sharma20/" rel="nofollow">Vipul
+        </footer>
+    </div> <!-- Main container div -->
+</body>
+</html>
